@@ -1,0 +1,149 @@
+/** @format */
+.app {
+  &__container {
+    // display: flex;
+    min-height: 100vh;
+
+    overflow: hidden;
+  }
+  &__body {
+    min-height: 100vh;
+    position: relative;
+    transition: 0.125s linear;
+    margin-left: 8rem;
+    &.toggled {
+      margin-left: 28rem;
+    }
+  }
+  &__page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &.dark {
+    color: #cdcdde !important;
+  }
+  &.bright {
+    color: #323334 !important;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.c-6 {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.c-3 {
+  max-width: 25%;
+  flex: 0 0 25%;
+}
+.c-2-4 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .m-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 992px) {
+  .search {
+    &__input {
+      svg:first-child {
+        display: block !important;
+      }
+    }
+  }
+  .m-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .small-size-mar {
+    margin: 0 auto !important;
+  }
+  .loader {
+    margin: 0 auto !important;
+  }
+  .navbar {
+    &__container {
+      display: none;
+      &.small-size-nav {
+        display: flex;
+      }
+    }
+    &.nav-active {
+      left: -28rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .search__user {
+    span {
+      display: none !important;
+    }
+  }
+  .copy-right {
+    flex-direction: column;
+  }
+  .player-control__song {
+    display: none !important;
+  }
+  .player-control__container {
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .search__user {
+    display: none !important;
+  }
+  .l-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .time {
+    display: none;
+  }
+  .head {
+    // flex-direction: column;
+    display: block !important;
+    h1 {
+      margin-bottom: 1rem !important;
+    }
+    // a {
+    //   flex-grow: 0;
+    // }
+  }
+}

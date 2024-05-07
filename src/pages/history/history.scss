@@ -1,0 +1,115 @@
+/** @format */
+
+.history {
+  width: 100%;
+  padding: 0 2rem;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .head {
+    display: flex;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    align-items: center;
+    justify-content: space-between;
+    select {
+      margin-left: 1rem;
+      padding: 1rem;
+      outline: none;
+      cursor: pointer;
+      border-radius: 1rem;
+      background-color: #1d1e22;
+      color: #ffffff;
+    }
+    span {
+      font-size: 1rem;
+      color: #535c7d;
+    }
+    h1 {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      p {
+        color: #7c3aed;
+        font-size: 2.4rem;
+        margin: 0;
+        margin-right: 0.5rem;
+      }
+    }
+    a {
+      align-self: flex-end;
+      color: #7c3aed;
+      text-decoration: none;
+      position: relative;
+      &::before {
+        content: "";
+        bottom: -0.5rem;
+        left: 0;
+        height: 0.2rem;
+        width: 100%;
+        position: absolute;
+        background-color: #7c3aed;
+      }
+      &::after {
+        content: "";
+        bottom: -1rem;
+        left: 0;
+        height: 0.2rem;
+        width: 100%;
+        position: absolute;
+        background-color: #7c3aed;
+        transform-origin: left; /* Điểm bắt đầu của hiệu ứng */
+        transform: scaleX(0); /* Đầu tiên, gạch chân không có chiều rộng */
+        transition: transform 0.3s ease;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      /* Khi không hover nữa, thu nhỏ gạch chân để biến mất */
+      &:not(:hover)::after {
+        transform-origin: right; /* Điểm bắt đầu của hiệu ứng */
+      }
+    }
+  }
+  &__songs {
+    .body {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -8px;
+      margin-right: -8px;
+      & > .col {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+      }
+      .item {
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: #1d1e22;
+        }
+      }
+      .load-more {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: 5rem auto;
+        background-color: #7c3aed;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        svg {
+          font-size: 2.4rem;
+        }
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
