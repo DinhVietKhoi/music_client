@@ -3,5 +3,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:5000/v1",
+  baseURL: "https://music-backend-cwwb.onrender.com/v1",
 });
